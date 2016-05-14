@@ -15,13 +15,13 @@ fun! s:constant_split(constant)
 endfun
 
 fun! s:underscore(string)
-	let parts = s:constant_split(string)
+	let parts = s:constant_split(a:string)
 	call map(parts, 'tolower(substitute(v:val, "[a-z]\@<=[A-Z]", "_&", "g"))')
 	return join(parts, '/')
 endfun
 
 fun! s:template(type, constant)
-	let parts = s:constant_split(constant)
+	let parts = s:constant_split(a:constant)
 	let modules = parts[:-2]
 	let inner_constant = parts[-1]
 	let padding = ''
