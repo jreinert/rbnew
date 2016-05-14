@@ -29,7 +29,7 @@ fun! s:template(type, constant)
 	let end_lines = []
 
 	for module in modules
-		call add(begin_lines, padding . 'module ' . part)
+		call add(begin_lines, padding . 'module ' . module)
 		call insert(end_lines, padding . 'end')
 		let padding .= '  '
 	endfor
