@@ -42,7 +42,7 @@ fun! s:template(type, constant)
 endfun
 
 fun! s:dirname(path)
-	return substitute(path, '\(.*\)/.*', '\1', '')
+	return substitute(a:path, '\(.*\)/.*', '\1', '')
 endfun
 
 fun! s:prompt_root()
