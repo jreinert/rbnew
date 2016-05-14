@@ -79,7 +79,7 @@ fun! rbnew#rbnew(type, constant)
 	let file_path = join([root, s:underscore(a:constant) . '.rb'], '/')
 	let directory_path = s:dirname(file_path)
 	call s:create_dir(directory_path)
-	silent exe 'edit ' . file
+	silent exe 'edit ' . file_path
 
 	if s:file_exists(file_path)
 		echo 'The file "' . file_path . '" already exists.'
