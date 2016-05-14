@@ -11,7 +11,7 @@ let g:loaded_rbnew = 1
 
 " Utility Functions {{{
 fun! s:constant_split(constant)
-	split(a:constant, '::')
+	return split(a:constant, '::')
 endfun
 
 fun! s:underscore(string)
